@@ -350,7 +350,7 @@ void TankBlaster (edict_t *self)
 	end[2] += self->enemy->viewheight;
 	VectorSubtract (end, start, dir);
 
-	monster_fire_blaster (self, start, dir, 30, 800, flash_number, EF_BLASTER);
+	monster_fire_blaster (self, start, dir, 30, 1000, flash_number, EF_BLASTER); // hack for client blaster bolt was 800
 }	
 
 void TankStrike (edict_t *self)

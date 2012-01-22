@@ -161,7 +161,7 @@ void monster_respawn(edict_t *self)
 	self->owner = self;
 	ED_CallSpawn (self);
     self->owner = NULL;
-	
+
 	gi.WriteByte (svc_temp_entity);
 	gi.WriteByte (TE_REBORN);
 	gi.WritePosition (self->s.origin);
@@ -187,7 +187,6 @@ void monster_reborn(edict_t *self)
 		return;
 
 	self->think = monster_respawn;
-
 	self->nextthink = level.time + 5 + 10 * random();
 
 	}
